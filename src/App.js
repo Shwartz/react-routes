@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Route, Switch} from 'react-router-dom';
-import Layout from './modules/components/hoc/Aux/Aux';
+import Layout from './modules/components/hoc/Layout/Layout';
 import Dashboard from './modules/components/dashboard/dashboard';
 import NicePage from "./modules/components/nicePage/nicePage";
 

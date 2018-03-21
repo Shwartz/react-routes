@@ -27,7 +27,7 @@ class Layout extends Component {
         {/*<SideDraw
           open={this.state.showSideDrawer}
           closed={this.sideDrawerCloseHandler}/>*/}
-        <main className={styles.Content}>
+        <main className="Content">
           {this.props.children}
         </main>
       </Aux>
