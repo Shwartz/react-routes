@@ -1,12 +1,12 @@
 import React from 'react';
 
-import styles from './NavigationItems.css';
+import './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = (props) => (
-  <ul className={styles.NavigationItems}>
-    <NavigationItem exact link="/">Burger builder</NavigationItem>
-    <NavigationItem link="/orders">Orders</NavigationItem>
+  <ul className="NavigationItems">
+    <NavigationItem exact link="/">home</NavigationItem>
+    <NavigationItem link="/nice-page">nice page</NavigationItem>
   </ul>
 );
 export default navigationItems;
