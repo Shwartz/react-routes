@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Aux from '../Aux/Aux';
 import './Layout.css';
 import MainMenu from '../../navigation/MainMenu/NavigationItems';
-//import SideDraw from '../../components/Navigation/SideDraw/SideDraw';
+import SideDraw from '../../navigation/SideDraw/SideDraw';
 
 class Layout extends Component {
   state = {
@@ -24,9 +24,9 @@ class Layout extends Component {
     return (
       <Aux>
         <MainMenu drawerToggleClicked={this.sideDrawerToggleHandler}/>
-        {/*<SideDraw
+        <SideDraw
           open={this.state.showSideDrawer}
-          closed={this.sideDrawerCloseHandler}/>*/}
+          closed={this.sideDrawerCloseHandler}/>
         <main className="Content">
           {this.props.children}
         </main>

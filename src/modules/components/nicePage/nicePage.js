@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 import './nicePage.css';
+
+
 class NicePage extends Component {
   state = {
     test: null,
@@ -12,7 +15,10 @@ class NicePage extends Component {
   render() {
     return (
       <div className="NicePage">
-        NicePage
+        <p>NicePage</p>
+        <ul>
+          <NavLink to="/nice-page/side-draw">Open sidedraw</NavLink>
+        </ul>
       </div>
     )
   }
