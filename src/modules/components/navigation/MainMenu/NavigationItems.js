@@ -5,8 +5,9 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = (props) => (
   <ul className="NavigationItems">
-    <NavigationItem exact link="/">home</NavigationItem>
-    <NavigationItem link="/nice-page">nice page</NavigationItem>
+    <NavigationItem exact link="/">Home</NavigationItem>
+    <NavigationItem link="/page-one">Page One</NavigationItem>
+    <NavigationItem link="/page-two">Page Two</NavigationItem>
   </ul>
 );
 export default navigationItems;
