@@ -170,64 +170,6 @@
             ],
             "greeting": "Hello, Effie! You have 8 unread messages.",
             "favoriteFruit": "strawberry"
-        },
-        {
-            "_id": "5ab3e8ae5b4535c3239d5835",
-            "index": 3,
-            "guid": "331ee355-b2d3-44ea-89d8-110ee5aba55d",
-            "isActive": true,
-            "balance": "$3,261.05",
-            "picture": "http://placehold.it/32x32",
-            "age": 24,
-            "eyeColor": "green",
-            "name": {
-                "first": "Kidd",
-                "last": "Hurley"
-            },
-            "company": "EPLODE",
-            "email": "kidd.hurley@eplode.biz",
-            "phone": "+1 (924) 419-3386",
-            "address": "961 River Street, Vowinckel, New Jersey, 3482",
-            "about": "Velit est adipisicing ea laboris cillum cupidatat cillum qui non. Sint officia aliqua fugiat est aliquip aliqua ut. Nostrud tempor irure aliqua tempor ad labore adipisicing ut. Est amet voluptate elit in mollit esse aliqua. Magna aliqua eiusmod do enim. Cupidatat cupidatat laboris ullamco irure exercitation consectetur officia aute et cupidatat tempor esse sint reprehenderit. Proident exercitation ut nostrud voluptate proident ea dolore incididunt est aliqua cupidatat dolor do.",
-            "registered": "Saturday, June 14, 2014 7:29 PM",
-            "latitude": "-49.018612",
-            "longitude": "-150.591215",
-            "tags": [
-                "laborum",
-                "velit",
-                "ut",
-                "tempor",
-                "velit"
-            ],
-            "range": [
-                0,
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9
-            ],
-            "friends": [
-                {
-                    "id": 0,
-                    "name": "Irwin Greene"
-                },
-                {
-                    "id": 1,
-                    "name": "Jefferson Shelton"
-                },
-                {
-                    "id": 2,
-                    "name": "Reid Oliver"
-                }
-            ],
-            "greeting": "Hello, Kidd! You have 5 unread messages.",
-            "favoriteFruit": "strawberry"
         }
     ]
 }
-
