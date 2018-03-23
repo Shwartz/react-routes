@@ -1,4 +1,17 @@
 .Comment {
-    background: lightpink;
+    background: white;
     padding: 8px;
+    border-bottom: 1px solid grey;
+}
+
+.Comment-name {
+    font-size: 13px;
+}
+
+.Comment-email {
+    font-size: 12px;
+}
+
+.Comment-body {
+    font-size: 13px;
 }

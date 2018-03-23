@@ -3,11 +3,12 @@ import React from 'react';
 import './comment.css';
 
 const comment = (props) => {
-  console.log('COMMENT: ', props);
 
   return (
     <div className="Comment">
-      <p>{props.email}</p>
+      <p className="Comment-name">{props.name}</p>
+      <p className="Comment-email">{props.email}</p>
+      <p className="Comment-body">{props.body}</p>
     </div>
   );
 };
