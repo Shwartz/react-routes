@@ -11,10 +11,10 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
+          <Route path="/" exact={true} component={Dashboard}/>
           <Route path="/items" component={Dashboard}/>
           <Route path="/page-one" component={PageOne}/>
           <Route path="/page-two" component={PageTwo}/>
-          <Route path="/" exact={true} component={Dashboard}/>
         </Layout>
       </div>
     );
