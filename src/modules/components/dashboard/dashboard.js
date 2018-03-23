@@ -12,7 +12,7 @@ class Dashboard extends Component {
 
   componentDidMount() {
     const {match} = this.props;
-    console.log('Dashboard: url: ', match.path, ' path: ', match.url);
+    console.log('Dashboard: url: ', match.path, ' | path: ', match.url);
     /*if (match.path.match(/item/)) {
       this.setState({showSideDrawer: true})
     }*/
@@ -49,7 +49,7 @@ class Dashboard extends Component {
         <button onClick={this.sideDrawerToggleHandler}>Toggle Drawer</button>
 
         <ul>
-          <li><NavLink to="/items/:10">Item 1</NavLink></li>
+          <li><NavLink to="/items/123456">Item 1</NavLink></li>
         </ul>
 
         {/*<SideDraw
@@ -57,12 +57,7 @@ class Dashboard extends Component {
           closed={this.sideDrawerCloseHandler}/>*/}
 
 
-        <Route path={`${match.url}/:10`} render={() => <SideDraw open={true} />} />
-        {/*<Route
-          exact
-          path={match.url}
-          render={() => <h3>Please select a topic.</h3>}
-        />*/}
+        <Route path={`${match.url}/:id`} render={() => <SideDraw {...this.props} data={'test'} open={true} />} />
       </div>
     )
   }

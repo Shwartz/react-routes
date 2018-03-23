@@ -4,6 +4,7 @@ import './SideDraw.css';
 import Aux from '../../hoc/Aux/Aux';
 
 const sideDraw = (props) => {
+  console.log('sidedraw props: ', props);
   let attachedClasses = ['SideDraw', 'Close'];
   if (props.open) {
     attachedClasses = ['SideDraw', 'Open'];
