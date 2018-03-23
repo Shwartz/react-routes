@@ -8,9 +8,22 @@ import Comments from './comments/comments';
 import './SideDraw.css';
 
 class SideDraw extends Component {
+  state = {
+    sideDraw: 'state is here'
+  };
+
+  updateTitle(title) {
+    this.setState((prevState) => {
+      if (prevState.sideDraw !== title) {
+       return {sideDraw: title}
+      }
+    });
+  }
+
 
   render() {
     const {match} = this.props;
+    console.log('SIDEDRAW this', this);
 
     return (
       <Aux>
@@ -18,6 +31,7 @@ class SideDraw extends Component {
           <nav>
             <Nav data={this.props}/>
           </nav>
+          <h3>Title</h3>
           <div className="SideDraw-content">
             <Route path={`${match.url}/`} exact={true} render={() => (<ItemInfo {...match} />)} />
             <Route path={`${match.url}/s1`} render={() => (<ItemInfo {...match} />)} />
