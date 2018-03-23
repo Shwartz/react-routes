@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {NavLink, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import axios from 'axios';
 
 import Item from '../item/item';
@@ -13,13 +13,9 @@ class Dashboard extends Component {
   };
 
   componentDidMount() {
-    const {match} = this.props;
-    console.log('--- Dashboard: url: ', match.path, ' | path: ', match.url);
-
     axios.get('/posts')
       .then(response => {
         const posts = response.data.slice(0, 10);
-        console.log('response posts', posts);
         const updatedPosts = posts.map(post => {
           return {
             ...post,
@@ -29,10 +25,8 @@ class Dashboard extends Component {
       })
   }
 
-
   render() {
     const {match} = this.props;
-    console.log('this: ', this);
 
     const items = this.state.posts.map(post => {
       return <Item
@@ -48,7 +42,6 @@ class Dashboard extends Component {
         <h3>Titles</h3>
 
         <ol>
-          {/*<li><NavLink to="/items/123456">Item 1</NavLink></li>*/}
           {items}
         </ol>
 

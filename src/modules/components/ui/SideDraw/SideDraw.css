@@ -19,3 +19,7 @@
 .Close {
     transform: translateX(100%);
 }
+
+.SideDraw-content {
+    background: white;
+}
