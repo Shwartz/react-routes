@@ -5,6 +5,9 @@ import {BrowserRouter} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'http://jsonplaceholder.typicode.com';
 
 const app = (
     <BrowserRouter>

@@ -2,62 +2,58 @@ import React, {Component} from 'react';
 import {NavLink, Route} from 'react-router-dom';
 import axios from 'axios';
 
+import Item from '../item/item';
 import SideDraw from '../ui/SideDraw/SideDraw';
 import './dashboard.css';
 
 class Dashboard extends Component {
-  /*state = {
-    showSideDrawer: false,
-  };*/
+  state = {
+    posts: [],
+    error: false,
+  };
 
   componentDidMount() {
     const {match} = this.props;
-    console.log('Dashboard: url: ', match.path, ' | path: ', match.url);
-    /*if (match.path.match(/item/)) {
-      this.setState({showSideDrawer: true})
-    }*/
+    console.log('--- Dashboard: url: ', match.path, ' | path: ', match.url);
 
-    /*axios({
-      method: 'get',
-      url: 'https://raw.githubusercontent.com/Shwartz/react-routes/master/db.json'
-          })
-      .then(res => {
-        console.log('res', res);
+    axios.get('/posts')
+      .then(response => {
+        const posts = response.data.slice(0, 10);
+        console.log('response posts', posts);
+        const updatedPosts = posts.map(post => {
+          return {
+            ...post,
+          }
+        });
+        this.setState({posts: updatedPosts});
       })
-      .catch(res => {
-        console.log('error res', res);
-      });*/
   }
 
-  sideDrawerCloseHandler = () => {
-    this.setState({showSideDrawer: false})
-  };
-
-  sideDrawerToggleHandler = () => {
-    this.setState((prevState) => {
-      return {showSideDrawer: !prevState.showSideDrawer};
-    });
-  };
 
   render() {
     const {match} = this.props;
     console.log('this: ', this);
 
+    const items = this.state.posts.map(post => {
+      return <Item
+        key={post.id}
+        id={post.id}
+        title={post.title}
+      />
+    });
+
     return (
       <div className="Dashboard">
         <p>Home: Dashboard</p>
-        <button onClick={this.sideDrawerToggleHandler}>Toggle Drawer</button>
+        <h3>Titles</h3>
 
-        <ul>
-          <li><NavLink to="/items/123456">Item 1</NavLink></li>
-        </ul>
+        <ol>
+          {/*<li><NavLink to="/items/123456">Item 1</NavLink></li>*/}
+          {items}
+        </ol>
 
-        {/*<SideDraw
-          open={this.state.showSideDrawer}
-          closed={this.sideDrawerCloseHandler}/>*/}
+        <Route path={`${match.url}/:id`} component={SideDraw} />
 
-
-        <Route path={`${match.url}/:id`} render={() => <SideDraw {...this.props} data={'test'} open={true} />} />
       </div>
     )
   }
