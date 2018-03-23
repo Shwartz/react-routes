@@ -1,22 +1,13 @@
 import React, {Component} from 'react';
 import Aux from '../../hoc/Aux/Aux';
 import {Route} from 'react-router-dom';
-import axios from 'axios';
 
 import Nav from './nav/nav';
 import ItemInfo from './itemInfo/itemInfo';
+import Comments from './comments/comments';
 import './SideDraw.css';
 
 class SideDraw extends Component {
-  state = {
-    post: []
-  };
-
-  componentDidMount() {
-    console.log('sideDraw props: ', this.props);
-    const {match} = this.props;
-    console.log('sideDraw match', match);
-  }
 
   render() {
     const {match} = this.props;
@@ -28,11 +19,11 @@ class SideDraw extends Component {
           </nav>
           <div>Title: {match.params.id}</div>
           <div className="SideDraw-content">
+            <Route path={`${match.url}/`} exact={true} component={ItemInfo} />
             <Route path={`${match.url}/s1`} component={ItemInfo} />
+            <Route path={`${match.url}/s2`} component={Comments} />
           </div>
         </div>
-
-
       </Aux>
     );
   }

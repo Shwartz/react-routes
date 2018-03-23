@@ -1,12 +1,13 @@
 import React from 'react';
 
-import './itemInfo.css';
+import './comments.css';
 
 const nav = (props) => {
-  console.log('itemInfo props: ', props);
+  const {match} = props;
+  console.log('comments match: ', match);
   return (
     <div className="ItemInfo">
-      <h1>Item info - S1</h1>
+      <h1>Comments - S2</h1>
     </div>
   );
 };
