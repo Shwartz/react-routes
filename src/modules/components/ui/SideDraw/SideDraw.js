@@ -11,17 +11,17 @@ class SideDraw extends Component {
 
   render() {
     const {match} = this.props;
+
     return (
       <Aux>
         <div className={['SideDraw', 'Open'].join(' ')}>
           <nav>
             <Nav data={this.props}/>
           </nav>
-          <div>Title: {match.params.id}</div>
           <div className="SideDraw-content">
-            <Route path={`${match.url}/`} exact={true} component={ItemInfo} />
-            <Route path={`${match.url}/s1`} component={ItemInfo} />
-            <Route path={`${match.url}/s2`} component={Comments} />
+            <Route path={`${match.url}/`} exact={true} render={() => (<ItemInfo {...match} />)} />
+            <Route path={`${match.url}/s1`} render={() => (<ItemInfo {...match} />)} />
+            <Route path={`${match.url}/s2`} render={() => (<Comments {...match} />)} />
           </div>
         </div>
       </Aux>
