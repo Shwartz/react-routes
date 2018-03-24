@@ -3,14 +3,10 @@ import {NavLink} from 'react-router-dom';
 
 import './nav.css';
 
+const oneUp = (str) => str.substr(0, str.lastIndexOf("/"));
+
 const itemInfo = (props) => {
   const {match} = props.data;
-  console.log('NAV: this', this, props);
-
-  const oneUp = (str) => {
-    console.log('str:', str.substr(0, str.lastIndexOf("/")));
-    return str.substr(0, str.lastIndexOf("/"));
-  };
 
   return (
     <ul className="Nav">
@@ -20,4 +16,5 @@ const itemInfo = (props) => {
     </ul>
   );
 };
+
 export default itemInfo;

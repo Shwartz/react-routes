@@ -22,7 +22,6 @@ class SideDraw extends Component {
 
   render() {
     const {match} = this.props;
-    console.log('SIDEDRAW this', this);
 
     return (
       <Aux>
