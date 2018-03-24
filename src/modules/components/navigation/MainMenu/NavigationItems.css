@@ -1,13 +1,13 @@
 .NavigationItems {
   margin: 0;
-  padding: 0;
+  padding: 16px 8px;
   list-style: none;
   display: flex;
   flex-flow: column;
   align-items: center;
   height: 100%;
   width: 100%;
-  max-width: 800px;
+  background: #333;
 }
 
 @media (min-width: 500px) {

@@ -1,21 +1,21 @@
 .NavigationItem {
-    margin: 10px 0;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
+  width: auto;
+  display: block;
+  box-sizing: border-box;
 }
 
 .NavigationItem a {
-    color: #0a0a1f;
-    text-decoration: none;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  color: #ccc;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .NavigationItem a:hover,
 .NavigationItem a:active,
 .NavigationItem a.active {
-    color: #40A4C8;
-    text-decoration: underline;
+  color: #fff;
+  text-decoration: underline;
 }

@@ -16,7 +16,7 @@ class Dashboard extends Component {
   componentDidMount() {
     axios.get('/posts')
       .then(response => {
-        const posts        = response.data.slice(0, 10);
+        const posts = response.data.slice(0, 10);
         const updatedPosts = posts.map(post => {
           return {
             ...post,
@@ -39,14 +39,9 @@ class Dashboard extends Component {
 
     return (
       <div className="Dashboard">
-        <p>Home: Dashboard</p>
-        <h3>Articles</h3>
-
-        <ol>
-          {items}
-        </ol>
-
-        <Route path={`${match.url}/:id`} component={SideDraw} />
+        <h1>Home page</h1>
+        <ol>{items}</ol>
+        <Route path={`${match.url}/:id`} component={SideDraw}/>
       </div>
     )
   }

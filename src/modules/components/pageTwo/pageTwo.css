@@ -1,9 +1,9 @@
 .PageTwo {
-    background: #fae3ad;
-    text-align: left;
-    min-height: 300px;
+  background: #fae3ad;
+  min-height: 500px;
+  padding: 24px;
 }
 
 .active {
-    color: tomato;
+  color: tomato;
 }

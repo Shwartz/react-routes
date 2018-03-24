@@ -7,7 +7,7 @@ class PageTwo extends Component {
     console.log(this);
     return (
       <div className="PageTwo">
-        <p>Page Two</p>
+        <h1>Page Two</h1>
       </div>
     )
   }
