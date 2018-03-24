@@ -22,3 +22,17 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+h1 {
+  border-bottom: 1px solid grey;
+  padding-bottom: 24px;
+  margin-bottom: 48px;
+}
+
+a {
+  color: #2e6cff;
+}
+
+ol {
+  padding: 16px;
+}

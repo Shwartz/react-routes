@@ -40,6 +40,7 @@ class Dashboard extends Component {
     return (
       <div className="Dashboard">
         <h1>Home page</h1>
+        <p>Using fake JSON <a href="http://jsonplaceholder.typicode.com">server</a> and creating list of the "posts".</p>
         <ol>{items}</ol>
         <Route path={`${match.url}/:id`} component={SideDraw}/>
       </div>

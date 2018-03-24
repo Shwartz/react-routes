@@ -1,12 +1,12 @@
 .Item {
-    background: lightpink;
-    padding: 8px;
+  padding: 8px;
 }
 
 .Item a {
-    color: #2e6cff;
+  display: block;
 }
 
-.Item a.active {
-    color: #e41613;
+.Item a.active,
+.Item a:hover {
+  color: #e41613;
 }
