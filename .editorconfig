@@ -2,6 +2,6 @@
 indent_style = space
 indent_size = 2
 
-[*.{js,json}]
+[*.{css,js,json}]
 indent_style = space
 indent_size = 2
