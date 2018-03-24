@@ -20,7 +20,6 @@ class SideDraw extends Component {
     });
   }
 
-
   render() {
     const {match} = this.props;
     console.log('SIDEDRAW this', this);
@@ -31,7 +30,7 @@ class SideDraw extends Component {
           <Nav data={this.props}/>
           <h3>Title</h3>
           <div className="SideDraw-content">
-            <Route path={`${match.url}/`} exact={true} render={() => (<ItemInfo {...match} />)}/>
+
             <Route path={`${match.url}/s1`} render={() => (<ItemInfo {...match} />)}/>
             <Route path={`${match.url}/s2`} render={() => (<Comments {...match} />)}/>
           </div>
