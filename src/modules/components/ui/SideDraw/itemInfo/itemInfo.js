@@ -35,7 +35,8 @@ class ItemInfo extends Component {
 
     return (
       <div className="ItemInfo">
-        <h3>{post.title}<sup>{params.id}</sup></h3>
+        <h3>{post.title}</h3>
+        <p>Article ID: {params.id}</p>
         <p>{post.body}</p>
       </div>
     );

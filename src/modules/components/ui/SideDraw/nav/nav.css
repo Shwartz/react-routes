@@ -1,4 +1,18 @@
 .Nav {
-    background: lightpink;
-    padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav a {
+  display: block;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 8px;
+  background: #f2f2f2;
+  text-decoration: none;
+  text-align: center;
 }

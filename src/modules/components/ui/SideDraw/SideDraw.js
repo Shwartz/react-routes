@@ -15,7 +15,7 @@ class SideDraw extends Component {
   updateTitle(title) {
     this.setState((prevState) => {
       if (prevState.sideDraw !== title) {
-       return {sideDraw: title}
+        return {sideDraw: title}
       }
     });
   }
@@ -28,14 +28,12 @@ class SideDraw extends Component {
     return (
       <Aux>
         <div className={['SideDraw', 'Open'].join(' ')}>
-          <nav>
-            <Nav data={this.props}/>
-          </nav>
+          <Nav data={this.props}/>
           <h3>Title</h3>
           <div className="SideDraw-content">
-            <Route path={`${match.url}/`} exact={true} render={() => (<ItemInfo {...match} />)} />
-            <Route path={`${match.url}/s1`} render={() => (<ItemInfo {...match} />)} />
-            <Route path={`${match.url}/s2`} render={() => (<Comments {...match} />)} />
+            <Route path={`${match.url}/`} exact={true} render={() => (<ItemInfo {...match} />)}/>
+            <Route path={`${match.url}/s1`} render={() => (<ItemInfo {...match} />)}/>
+            <Route path={`${match.url}/s2`} render={() => (<Comments {...match} />)}/>
           </div>
         </div>
       </Aux>

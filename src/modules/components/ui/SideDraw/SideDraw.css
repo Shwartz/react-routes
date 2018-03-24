@@ -6,9 +6,10 @@
     top: 0;
     right: 0;
     z-index: 200;
-    background-color: #fff384;
-    padding: 32px 16px;
+    background-color: #fff;
+    padding: 32px 40px 32px 16px;
     box-sizing: border-box;
+    box-shadow: 1px 1px 4px 0 black;
     transition: transform 0.3s ease-out;
 }
 
